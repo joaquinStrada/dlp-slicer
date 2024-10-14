@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLP Slicer</title>
+    <link rel="stylesheet" href="./fonts/css/all.min.css">
+    <link rel="stylesheet" href="./fonts/Roboto.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <form class="app" id="app">
+        <div class="btn-file">
+            <input type="file" class="input-file" id="input-file">
+            <span class="txt-file" id="txt-file">
+                <i class="fa-solid fa-upload"></i>
+                Seleccionar archivo
+            </span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="btn-navigation active" id="view-stl">
+                        <i class="fa-solid fa-cube"></i>
+                        Visualizar Stl
+                    </a></li>
+                <li><a href="#" class="btn-navigation" id="dlp-stl">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Dlp Slicer
+                    </a></li>
+            </ul>
+        </nav>
+        <div class="content-parent">
+            <div class="content" id="content"></div>
+        </div>
+    </form>
+
+    <template id="template-dlp">
+        <div class="row">
+            <canvas class="canvas" id="canvas"></canvas>
+            <div class="slider" id="slider">
+                <div class="bar" id="bar"></div>
+                <div class="point" id="point"></div>
+            </div>
+        </div>
+        <p class="txt-slider">Capa: <span id="txt-slider">0</span></p>
+    </template>
+
+    <script src="./lib/stl-part-viewer/index.js" type="module"></script>
+    <script src="./lib/axios.min.js"></script>
+    <script src="./js/app.js" type="module"></script>
+</body>
+</html>
